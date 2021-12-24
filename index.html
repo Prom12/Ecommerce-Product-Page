@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | E-commerce product page</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./index.css" type="text/css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.0.2"></script>
+  </head>
+  <body>
+    <div id="app">
+      <nav>
+        <div>
+          <div>
+            <img id="icon" @click="toggle_nav" src="/images/icon-menu.svg">
+            <h2>sneakers</h2>
+          </div>
+          <ul v-show ="nav_tab" class="list">
+            <div @click="toggle_nav"><img src="/images/icon-close.svg"></div>
+            <li class="list-item">Collections</li>
+            <li class="list-item">Men</li>
+            <li class="list-item active">Women</li>
+            <li class="list-item">About</li>
+            <li class="list-item">Contact</li>
+          </ul>
+        </div>
+        <div>
+          <div>
+            <img src="/images/icon-cart.svg" />
+            <div>{{cart}}</div>
+          </div>
+          <img src="/images/image-avatar.png" />
+        </div>
+      </nav>
+      <div class="middle">
+        <div class="left">
+          <div><img src="/images/image-product-1.jpg" /></div>
+        </div>
+        <div class="right">
+          <h4>SNEAKER COMPANY</h4>
+          <h2>Fall Limited Edition Sneakers</h2>
+          <p>
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+          <div class="right_amount">
+            <div>
+              <h3>$125.00</h3>
+              <p>50%</p>
+            </div>
+            <p><strike>$250.00</strike></p>
+          </div>
+          <div class="right_bottom">
+            <div>
+              <div @click="decrement()">
+                <img src="/images/icon-minus.svg" />
+              </div>
+              <span>{{count}}</span>
+              <div @click="increment()">
+                <img src="images/icon-plus.svg" />
+              </div>
+            </div>
+            <div v-on:click="cart++">
+              <div><img src="/images/icon-cart.svg"/><h4>Add to cart</h4></div>
+            </div>
+          </div>
+        </div>
+        </div>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
