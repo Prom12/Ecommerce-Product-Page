@@ -68,7 +68,7 @@
                   <p>{{product.name}}</p>
                   <p>${{product.amount}} x {{product.quantity}} <strong>${{product.amount*product.quantity}}</strong></p>
                 </div>
-                <img @click="CartDelete(product.name)" src="images/icon-delete.svg">
+                <img @click="CartDelete(product.name)" src="./images/icon-delete.svg">
                 </div>
               </div>
               <div>
@@ -99,7 +99,7 @@
               </div>
               <span>{{count}}</span>
               <div @click="increment()">
-                <img src="images/icon-plus.svg" />
+                <img src="/images/icon-plus.svg" />
               </div>
             </div>
             <div v-on:click="CartAdd({id:1,name:'Fall Limited Edition Sneakers',amount:125,quantity:count})">
