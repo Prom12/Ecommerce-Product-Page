@@ -367,6 +367,9 @@ nav div:nth-child(2) > div > div {
   /* End Nav */
 
   /* Middle */
+  .middle {
+    height: 70vh;
+  }
   .left {
     width: 100vw;
     height: 35vh;
