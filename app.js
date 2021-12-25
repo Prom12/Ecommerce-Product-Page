@@ -15,7 +15,12 @@ const app = Vue.createApp({
       });
       console.log(value);
       if (value) {
-        this.count++;
+        var some = this.products.filter((product) => {
+          return Product.name == product.name;
+        });
+        console.log(some);
+        this.products.splice(Product, 1);
+        this.products.unshift(Product);
       } else {
         this.products.unshift(Product);
         this.cart++;
