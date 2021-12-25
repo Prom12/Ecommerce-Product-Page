@@ -4,7 +4,7 @@ const app = Vue.createApp({
       count: 1,
       cart: 0,
       nav_tab: false,
-      cart_tab: true,
+      cart_tab: false,
       products: [],
     };
   },
@@ -15,10 +15,6 @@ const app = Vue.createApp({
       });
       console.log(value);
       if (value) {
-        var some = this.products.filter((product) => {
-          return Product.name == product.name;
-        });
-        console.log(some);
         this.products.splice(Product, 1);
         this.products.unshift(Product);
       } else {
@@ -33,7 +29,7 @@ const app = Vue.createApp({
       this.count += 1;
     },
     decrement() {
-      if (this.count === 0) return;
+      if (this.count === 1) return;
       this.count -= 1;
     },
     toggle_nav() {
@@ -50,7 +46,6 @@ const app = Vue.createApp({
   created() {
     this.handleView();
     window.addEventListener("resize", this.handleView);
-    this.products = [{ id: 1, name: "Fall Limit", amount: 125, quantity: 1 }];
   },
 });
 
