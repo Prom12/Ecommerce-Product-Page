@@ -28,11 +28,11 @@
       <nav>
         <div>
           <div>
-            <img id="icon" @click="toggle_nav" src="/images/icon-menu.svg">
+            <img id="icon" @click="toggle_nav" src="/images/icon-menu.svg" alt="menu-icon">
             <h2>sneakers</h2>
           </div>
           <ul v-show ="nav_tab" class="list">
-            <div @click="toggle_nav"><img src="/images/icon-close.svg"></div>
+            <div @click="toggle_nav"><img src="/images/icon-close.svg" alt="close-icon"></div>
             <li class="list-item">Collections</li>
             <li class="list-item">Men</li>
             <li class="list-item active">Women</li>
@@ -42,20 +42,20 @@
         </div>
         <div>
           <div>
-            <img @click="toggle_cart" src="/images/icon-cart.svg" />
+            <img @click="toggle_cart" src="/images/icon-cart.svg" alt="cart-icon"/>
             <div v-if="products.length">{{products.length}}</div>
           </div>
-          <img src="/images/image-avatar.png" />
+          <img src="/images/image-avatar.png" alt="profile"/>
         </div>
       </nav>
       <div class="middle">
         <div class="left">
-          <img src="/images/image-product-1.jpg" />
+          <img src="/images/image-product-1.jpg" alt="product-img" />
           <div>
-            <img src="/images/image-product-1-thumbnail.jpg"/>
-            <img src="/images/image-product-2-thumbnail.jpg"/>
-            <img src="/images/image-product-3-thumbnail.jpg"/>
-            <img src="/images/image-product-4-thumbnail.jpg"/>
+            <img src="/images/image-product-1-thumbnail.jpg" alt="product-img"/>
+            <img src="/images/image-product-2-thumbnail.jpg" alt="product-img"/>
+            <img src="/images/image-product-3-thumbnail.jpg" alt="product-img"/>
+            <img src="/images/image-product-4-thumbnail.jpg" alt="product-img"/>
           </div>
           <div v-if="cart_tab" class="card">
             <div><h4>Cart</h4></div>
@@ -63,12 +63,12 @@
             <div v-else class="card_items">
               <div>
                 <div v-for="(product,i) in products" :key="i">
-                <img src="/images/image-product-1-thumbnail.jpg"/>
+                <img src="/images/image-product-1-thumbnail.jpg" alt="product-img"/>
                 <div>
                   <p>{{product.name}}</p>
                   <p>${{product.amount}} x {{product.quantity}} <strong>${{product.amount*product.quantity}}</strong></p>
                 </div>
-                <img @click="CartDelete(product.name)" src="./images/icon-delete.svg">
+                <img @click="CartDelete(product.name)" src="./images/icon-delete.svg" alt="delete-icon">
                 </div>
               </div>
               <div>
@@ -90,20 +90,20 @@
               <h3>$125.00</h3>
               <p>50%</p>
             </div>
-            <p><strike>$250.00</strike></p>
+            <p><s>$250.00</s></p>
           </div>
           <div class="right_bottom">
             <div>
               <div @click="decrement()">
-                <img src="/images/icon-minus.svg" />
+                <img src="/images/icon-minus.svg" alt="minus-icon"/>
               </div>
               <span>{{count}}</span>
               <div @click="increment()">
-                <img src="/images/icon-plus.svg" />
+                <img src="/images/icon-plus.svg" alt="add-icon"/>
               </div>
             </div>
             <div v-on:click="CartAdd({id:1,name:'Fall Limited Edition Sneakers',amount:125,quantity:count})">
-              <div ><img src="/images/icon-cart.svg"/><h4 >Add to cart</h4></div>
+              <div ><img src="/images/icon-cart.svg" alt="cart-icon"/><h4 >Add to cart</h4></div>
             </div>
           </div>
         </div>
