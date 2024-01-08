@@ -14,7 +14,6 @@ This is a solution to the [E-commerce product page challenge on Frontend Mentor]
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -34,7 +33,7 @@ Users should be able to:
 ![](./screenshot.jpg)
 
 <p float="left">
-<img src="https://github.com/Prom12/Ecommerce-Oroduct-Page/blob/master/assets/Screenshot/categories.jpg" alt="alt text" width="20%" height="50%">
+<img src="https://github.com/Prom12/Ecommerce-Product-Page/blob/master/design/desktop-preview.jpg" alt="alt text" width="50%" height="50%">
 </p>
 
 ### Links
